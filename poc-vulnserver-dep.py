@@ -1,7 +1,6 @@
 import socket
 import sys
 from struct import pack
-import time
 
 
 
